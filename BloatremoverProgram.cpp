@@ -5,6 +5,7 @@
 using namespace std;
 
 //x86_64-w64-mingw32-c++ -static-libgcc -static-libstdc++ -mconsole -mdll -mnop-fun-dllimport -mthreads -municode -mwin32 -mwindows -fno-set-stack-executable -Wl,-V BloatremoverProgram.cpp -o BloatremoverProgram.exe
+//x86_64-w64-mingw32-c++ -pie -pthread -static-libgcc -static-libstdc++ -mconsole -mdll -mnop-fun-dllimport -mthreads -municode -mwin32 -Wl,-enable-stdcall-fixup -Wl,-enable-auto-import -Wl,-enable-runtime-pseudo-reloc -mwindows BloatremoverProgram.cpp -o BloatremoverProgram.exe
 
 int main(int argc, char* argv[]) //allows for arguments to be passed in command execution.
 {

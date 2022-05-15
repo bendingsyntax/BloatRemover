@@ -4,6 +4,8 @@
 //#include <windows.h>
 using namespace std;
 
+//x86_64-w64-mingw32-c++ -static-libgcc -static-libstdc++ -mconsole -mdll -mnop-fun-dllimport -mthreads -municode -mwin32 -mwindows -fno-set-stack-executable -Wl,-V BloatremoverProgram.cpp -o BloatremoverProgram.exe
+
 int main(int argc, char* argv[]) //allows for arguments to be passed in command execution.
 {
 	//ShowWindow(GetConsoleWindow(), SW_HIDE); //Runs cmd without being shown on screen AKA silent

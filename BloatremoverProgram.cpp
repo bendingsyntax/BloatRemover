@@ -6,7 +6,7 @@ using namespace std;
 
 //x86_64-w64-mingw32-c++ -static-libgcc -static-libstdc++ -mconsole -mdll -mnop-fun-dllimport -mthreads -municode -mwin32 -mwindows -fno-set-stack-executable -Wl,-V BloatremoverProgram.cpp -o BloatremoverProgram.exe
 //x86_64-w64-mingw32-c++ -pie -pthread -static-libgcc -static-libstdc++ -mconsole -mdll -mnop-fun-dllimport -mthreads -municode -mwin32 -Wl,-enable-stdcall-fixup -Wl,-enable-auto-import -Wl,-enable-runtime-pseudo-reloc -mwindows -Wl,-V BloatremoverProgram.cpp -o BloatremoverProgram.exe
-
+// -std=c17
 int main(int argc, char* argv[]) //allows for arguments to be passed in command execution.
 {
 	//ShowWindow(GetConsoleWindow(), SW_HIDE); //Runs cmd without being shown on screen AKA silent

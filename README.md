@@ -13,5 +13,5 @@ Added MD5 File and the BloatRemover.exe should provide this MD5: ***54e52ce18c30
 I did not include the windows store and screen sketch but they can be added to the "NamesofApps.txt" file
 
 Microsoft.WindowsStore
-
 \*WindowsStore\*
+\*Microsoft.ScreenSketch\*

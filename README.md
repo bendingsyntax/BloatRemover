@@ -8,7 +8,7 @@ Bloatremover is a personal program i wrote to remove some of the bloat apps that
 
 Run as Admin and it should work on windows now (BloatRemover.exe and NamesofApps.txt) 
 
-Added MD5 File and the BloatRemover.exe should provide this MD5: 54e52ce18c303375242df1f26d61265f
+Added MD5 File and the BloatRemover.exe should provide this MD5: ***54e52ce18c303375242df1f26d61265f***
 
 I did not include the windows store and screen sketch but they can be added to the "NamesofApps.txt" file
 

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <windows.h>
+//#include <windows.h>
 #include <pthread.h> //added to try and fix the -lpthread not found error on compile.
 using namespace std;
 

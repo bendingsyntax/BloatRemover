@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 #include <windows.h>
-#include <pthread.h>
+#include <pthread.h> //added to try and fix the -lpthread not found error on compile.
 using namespace std;
 
 //x86_64-w64-mingw32-c++ -static-libgcc -static-libstdc++ -mconsole -mdll -mnop-fun-dllimport -mthreads -municode -mwin32 -mwindows -fno-set-stack-executable -Wl,-V BloatremoverProgram.cpp -o BloatremoverProgram.exe

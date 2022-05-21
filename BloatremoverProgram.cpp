@@ -10,6 +10,7 @@ using namespace std;
 // -std=c17
 
 //x86_64-w64-mingw32-g++ -static-libgcc -static-libstdc++ -mdll -MT BloatremoverProgram.cpp -o BloatremoverProgram2.exe
+//x86_64-w64-mingw32-g++ -static-libgcc -static-libstdc++ -mdll -mthreads -MT BloatremoverProgram.cpp -o BloatremoverProgram2.exe
 int main(int argc, char* argv[]) //allows for arguments to be passed in command execution.
 {
 	//ShowWindow(GetConsoleWindow(), SW_HIDE); //Runs cmd without being shown on screen AKA silent

@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <stdio.h>
+#include <stdlib.h> //for "system" calls
 //#include <windows.h>
 #include <pthread.h> //added to try and fix the -lpthread not found error on compile.
 using namespace std;
@@ -11,10 +13,13 @@ using namespace std;
 
 //x86_64-w64-mingw32-g++ -static-libgcc -static-libstdc++ -mdll -MT BloatremoverProgram.cpp -o BloatremoverProgram2.exe
 //x86_64-w64-mingw32-g++ -static-libgcc -static-libstdc++ -mdll -mthreads -MT BloatremoverProgram.cpp -o BloatremoverProgram2.exe
+//fedora 35 installed  libstdc++-docs libstdc++-static glibc-static
+	// now able to use command "g++ -std=c++23 -lpthread --static -static-libgcc -static-libstdc++ -pthread BloatremoverProgram.cpp -o BloatremoverProgram2.exe"
 int main(int argc, char* argv[]) //allows for arguments to be passed in command execution.
 {
 	//ShowWindow(GetConsoleWindow(), SW_HIDE); //Runs cmd without being shown on screen AKA silent
 	string sFile, sTemp, extFile = ".txt", sNames[500]; //creates a temporary string variable to hold the values in the file while itterating, This will also allow sFile to accept an argument in the CLI, sNames for a large enough array of strings.
+	
 	int x = 0, y = 0, z = 0, w = 0; // creates three place holder integer files
 	string sList[] = { "Microsoft.XboxIdentityProvider", "Windows.CBSPreview", "Microsoft.XboxGameCallableUI", "Microsoft.Windows.NarratorQuickStart",
 		"Microsoft.Windows.ParentalControls", "Microsoft.SkypeApp", "Microsoft.StorePurchaseApp", "Microsoft.People", "Microsoft.ZuneMusic",
@@ -64,7 +69,7 @@ int main(int argc, char* argv[]) //allows for arguments to be passed in command 
 		}
 	}
 	
-	ifstream fNames(sFile); // reopens the same file with corrected file extension
+	ifstream fNames(sFile.c_str()); // reopens the same file with corrected file extension // added .c_str() to make the ifstream happy aka ifstream needs a "const char*" and this fixes that somehow?
 	if (!fNames.is_open()) // checks to make sure the file was actually opened
 	{
 		cout << "Error unable to open file\nPlease make sure the file is entered correctly or make sure file is in the same folder as this program." << endl; //reports error if not able to open

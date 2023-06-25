@@ -1,4 +1,7 @@
 # BloatRemover
+
+RUN AS ADMIN ONLY!
+
 Bloatremover is a personal program i wrote to remove some of the bloat apps that come pre installed with windows.
   Specifically one run as administrator (probably wont work on windows if compilled with g++ on linux, will attempt to fix)
   first it will check if there is a file "NamesofApps.txt" in the same folder the one in this repo is a generic list (to include more apps simply add a new line with the app name)
